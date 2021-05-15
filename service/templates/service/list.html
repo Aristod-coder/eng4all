@@ -1,0 +1,135 @@
+{% extends "base.html" %}
+
+{%block content%}
+<html>
+<title>TABELA DE PREÇOS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<body>
+
+<div class="w3-white w3-margin">
+<h1 align="center">TABELA DE PREÇOS</h1>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.columns {
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+}
+
+.price {
+  list-style-type: none;
+  border: 1px solid #eee;
+  margin: 0;
+  padding: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.price:hover {
+  box-shadow: 0 8px 12px 0 rgba(0,0,0,0.2)
+}
+
+.price .header {
+  background-color: #111;
+  color: white;
+  font-size: 25px;
+}
+
+.price li {
+  border-bottom: 1px solid #eee;
+  padding: 20px;
+  text-align: center;
+}
+
+.price .grey {
+  background-color: #eee;
+  font-size: 20px;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 10px 25px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+@media only screen and (max-width: 600px) {
+  .columns {
+    width: 100%;
+  }
+}
+</style>
+<body>
+
+<h2 style="text-align:center; font-family: Oswald">INVISTA EM SI MESMO E SEJA O IMPULSIONADOR DO TEU SUCESSO</h2>
+<p style="text-align:center"></p>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header">Iniciante</li>
+    <li class="grey"> 35 000 kz / 3 meses</li>
+    <li>Entender e usar expressões simples</li>
+    <li>Capaz de se apresentar e apresentar outras pessoas </li>
+    <li>Perguntar e responder questões simples</li>
+    <li>BCI</li>
+    <li>Número de conta: xxxxxxxxxxxxxxxxxxx</li>
+    <li>IBAN: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+    <li class="grey"><a href="http://127.0.0.1:8000/payment" class="button">Inscreva - se</a></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header" style="background-color:#4CAF50">Avançado</li>
+    <li class="grey"> 45 000 kz / 3 meses</li>
+    <li>Compreender bem assuntos mais complexos</li>
+    <li>Comunicar de uma forma fluída na maioria das vezes</li>
+    <li>Facilidade em se virar na língua</li>
+    <li>BCI</li>
+    <li>Número de conta: xxxxxxxxxxxxxxxxxxx</li>
+    <li>IBAN: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+    <li class="grey"><a href="http://127.0.0.1:8000/payment" class="button">Inscreva - se</a></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header">Intensivo</li>
+    <li class="grey"> 55 000 kz / 3 meses</li>
+    <li>Mais confiança na interação com os outros</li>
+    <li>Fluência e espontaneidade</li>
+    <li>Clareza na comunicação</li>
+    <li>BCI</li>
+    <li>Número de conta: xxxxxxxxxxxxxxxxxxx</li>
+    <li>IBAN: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+    <li class="grey"><a href="http://127.0.0.1:8000/payment" class="button">Inscreva - se</a></li>
+  </ul>
+</div>
+
+<div class="columns">
+  <ul class="price">
+    <li class="header">Corporativo</li>
+    <li class="grey"> 150 000 kz / 3 meses </li>
+    <li>Uso do idioma para os negócios e para o cotidiano profissional</li>
+    <li>Uso do idioma e a sua utilização na compreensão de termos técnicos profissionais</li>
+    <li>Sua utilização vai muito além das reuniões, apresentações, eventos corporativos</li>
+    <li>BCI</li>
+    <li>Número de conta: xxxxxxxxxxxxxxxxxxx</li>
+    <li>IBAN: xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx</li>
+    <li class="grey"><a href="http://127.0.0.1:8000/payment" class="button">Inscreva - se</a></li>
+  </ul>
+</div>
+
+</body>
+</html>
+
+
+
+ {%endblock content%}}

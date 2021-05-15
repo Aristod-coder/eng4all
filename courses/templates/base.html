@@ -1,0 +1,51 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>{% block title %}Educa{% endblock %}</title>
+  <link rel="shortcut icon" type="img/png" href="{% static 'favicon-16x16.png'%}">
+  <link href="{% static 'base.css'%}" rel="stylesheet" type="text/css">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open Sans">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <div id="header" class="w3-green">
+    <a href="/" class="logo" style="text-decoration:none;
+    font-family:'Roboto', sans-serif;
+    font-weight:300;
+    text-transform:unset;
+    font-size:24px;
+    color:#fff;
+    float:left;"><strong>English4All +</strong></a>
+    <div class="menu">
+      {% if request.user.is_authenticated %}
+        <a href="{% url 'logout' %}"><i class="fa fa-sign-out w3-bar-item w3-button w3-green" aria-hidden="true"></i>Sign out</a>
+         <a href="http://127.0.0.1:8000/students/courses/" class="w3-bar-item w3-button w3-green"><i class="fa fa-list" aria-hidden="true"></i>return to course list</a>
+         <a href="http://127.0.0.1:8000/home/" class="w3-bar-item w3-button w3-green"><i class="fa fa-home" aria-hidden="true"></i>Return home</a>
+      {% else %}
+        <a href="http://127.0.0.1:8000/students/register/" class="w3-bar-item w3-button w3-green"><i class="fa fa-registered" aria-hidden="true"></i>Regista - se</a>
+        <a href="http://127.0.0.1:8000/home/" class="w3-bar-item w3-button w3-green"><i class="fa fa-home" aria-hidden="true"></i>Return home</a>
+
+        
+      {% endif %}
+    </div>
+  </div>
+ <div id="content">
+  {% block content %}
+  {% endblock %}
+  </div>
+ <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js">
+ </script>
+ <script src=""></script>
+ <script>
+ $(document).ready(function() {
+ {% block domready %}
+ {% endblock %}});
+ </script>
+</body>
+</html>
